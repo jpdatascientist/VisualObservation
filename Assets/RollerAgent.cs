@@ -27,16 +27,16 @@ public class RollerAgent : Agent
         Target.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
     }
 
-    public override void CollectObservations(VectorSensor sensor)
-    {
-        // Target and Agent positions
-        sensor.AddObservation(Target.localPosition);
-        sensor.AddObservation(this.transform.localPosition);
+    // public override void CollectObservations(VectorSensor sensor)
+    // {
+    //     // Target and Agent positions
+    //     sensor.AddObservation(Target.localPosition);
+    //     sensor.AddObservation(this.transform.localPosition);
 
-        // Agent velocity
-        sensor.AddObservation(rBody.velocity.x);
-        sensor.AddObservation(rBody.velocity.z);
-    }
+    //     // Agent velocity
+    //     sensor.AddObservation(rBody.velocity.x);
+    //     sensor.AddObservation(rBody.velocity.z);
+    // }
 
     public float forceMultiplier = 10;
     public override void OnActionReceived(ActionBuffers actionBuffers)
